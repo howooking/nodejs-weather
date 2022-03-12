@@ -43,7 +43,7 @@ app.get('/help', (req, res) => {
 app.get('/weather', (req, res) => {
   if (!req.query.address) {
     return res.send({
-      error: '지역을 입력하세요'
+      error: '지역을 입력하세요.'
     })
   }
   geocode(req.query.address, (error, { latitude, longitude, location } = {} ) => {
