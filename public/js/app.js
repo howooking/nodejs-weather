@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit', (e) => {
   const location = search.value
   messageOne.innerHTML = '데이터 가져오는 중'
   messageTwo.innerHTML = '' //전에 검색했던 기록 없에기
-  fetch(`http://localhost:3000/weather?address=${location}`).then((response) => { //then은 나중에 배울거(promise개념)
+  fetch(`/weather?address=${location}`).then((response) => { //then은 나중에 배울거(promise개념)
     response.json().then((data) => {
       if (data.error) {
         messageOne.innerHTML = data.error
